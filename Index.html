@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Happy Father's Day, Papa</title>
+<meta name="description" content="A tribute to my father.">
+
+<!-- Google Fonts: Elegant serif for headings (Cormorant Garamond), modern sans for body (Inter) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- LOADER -->
+<!-- ============================================ -->
+<div class="loader" id="loader">
+  <div class="loader-content">
+    <p class="loader-text">For the man who believed in me<br>more than I believed in myself.</p>
+    <div class="loader-bar"><span class="loader-bar-fill" id="loaderFill"></span></div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- CUSTOM CURSOR (desktop only) -->
+<!-- ============================================ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============================================ -->
+<!-- SCROLL PROGRESS -->
+<!-- ============================================ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============================================ -->
+<!-- SECTION 1 — HERO -->
+<!-- ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="assets/photo-hero.jpg" alt="Me and my father" class="hero-img" id="heroImg">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <canvas class="particles-canvas" id="particlesHero"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-card glass">
+      <p class="hero-eyebrow">Father&rsquo;s Day</p>
+      <h1 class="hero-title">Happy Father&rsquo;s Day,<br>Papa</h1>
+      <p class="hero-subtitle">For the man who believed in me<br>when I couldn&rsquo;t believe in myself.</p>
+      <button class="btn-begin" id="beginBtn">
+        <span>Begin</span>
+      </button>
+    </div>
+  </div>
+
+  <button class="scroll-indicator" id="scrollIndicator" aria-label="Scroll down">
+    <span>Scroll</span>
+    <span class="scroll-arrow">↓</span>
+  </button>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 2 — MEMORIES GALLERY -->
+<!-- ============================================ -->
+<section class="gallery-section" id="gallery">
+  <div class="section-heading reveal">
+    <p class="section-eyebrow">02 — Gallery</p>
+    <h2 class="section-title">Our Memories</h2>
+    <p class="section-subtitle">A few moments that mean the world to me.</p>
+  </div>
+
+  <div class="bento-grid">
+    <button class="bento-item bento-feature reveal" data-index="0">
+      <img src="assets/photo-1.jpg" alt="Memory one" loading="lazy">
+      <div class="bento-caption glass">
+        <span>The one that started it all</span>
+      </div>
+    </button>
+
+    <button class="bento-item bento-small reveal" data-index="1">
+      <img src="assets/photo-2.jpg" alt="Memory two" loading="lazy">
+      <div class="bento-caption glass">
+        <span>Always by my side</span>
+      </div>
+    </button>
+
+    <button class="bento-item bento-small reveal" data-index="2">
+      <img src="assets/photo-3.jpg" alt="Memory three" loading="lazy">
+      <div class="bento-caption glass">
+        <span>A quiet kind of strength</span>
+      </div>
+    </button>
+
+    <button class="bento-item bento-small reveal" data-index="3">
+      <img src="assets/photo-4.jpg" alt="Memory four" loading="lazy">
+      <div class="bento-caption glass">
+        <span>Lessons I still carry</span>
+      </div>
+    </button>
+
+    <button class="bento-item bento-small reveal" data-index="4">
+      <img src="assets/photo-5.jpg" alt="Memory five" loading="lazy">
+      <div class="bento-caption glass">
+        <span>Home, wherever you are</span>
+      </div>
+    </button>
+
+    <button class="bento-item bento-small reveal" data-index="5">
+      <img src="assets/photo-6.jpg" alt="Memory six" loading="lazy">
+      <div class="bento-caption glass">
+        <span>Forever grateful</span>
+      </div>
+    </button>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- LIGHTBOX -->
+<!-- ============================================ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+  <img src="" alt="" class="lightbox-img" id="lightboxImg">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 3 — THE LETTER -->
+<!-- ============================================ -->
+<section class="letter-section" id="letter">
+  <div class="letter-container">
+    <p class="letter-eyebrow reveal">03 — The Letter</p>
+    <h2 class="letter-heading reveal">Last June.</h2>
+
+    <div class="letter-text" id="letterText">
+      <p class="letter-para" data-p="0">Last June, I failed, and for a while, I lost my way. I questioned myself, my dreams, and everything I thought I was capable of.</p>
+      <p class="letter-para" data-p="1">There were voices that filled me with doubt and tried to convince me that I was not enough.</p>
+      <p class="letter-para letter-emphasis" data-p="2">But you never listened to those voices.</p>
+      <p class="letter-para" data-p="3">You trusted me when I couldn&rsquo;t trust myself. You saw potential in me that I could no longer see, and when I was standing at a crossroads, you gently showed me the right path.</p>
+      <p class="letter-para" data-p="4">You never saw me as my failure. You saw me as the person I could still become.</p>
+      <p class="letter-para" data-p="5">Even today, I don&rsquo;t think I believe in myself as much as you believe in me.</p>
+      <p class="letter-para" data-p="6">And that has been one of the greatest gifts of my life.</p>
+      <p class="letter-para" data-p="7">Thank you for standing beside me, for never doubting me, and for holding on to my dreams when I was ready to let go of them.</p>
+      <p class="letter-para" data-p="8">I hope one day I become everything you already believe I can be.</p>
+      <p class="letter-para letter-signoff" data-p="9">Happy Father&rsquo;s Day, Papa.</p>
+      <p class="letter-para letter-signature" data-p="10">With all my love,<br>Lucky <span class="heart">&#10084;</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 4 — QUOTE SCREEN -->
+<!-- ============================================ -->
+<section class="quote-section" id="quote">
+  <canvas class="particles-canvas" id="particlesQuote"></canvas>
+  <blockquote class="quote-text reveal">
+    &ldquo;I hope one day I become everything<br>you already believe I can be.&rdquo;
+  </blockquote>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 5 — FINAL TRIBUTE -->
+<!-- ============================================ -->
+<section class="final-section" id="final">
+  <div class="final-bg">
+    <img src="assets/photo-final.jpg" alt="Me and my father" class="final-img">
+    <div class="final-overlay"></div>
+  </div>
+
+  <div class="final-content">
+    <h2 class="final-title reveal">Thank You, Papa.</h2>
+    <p class="final-subtitle reveal">Happy Father&rsquo;s Day.</p>
+    <p class="final-signature reveal">With all my love,<br>Lucky <span class="heart heart-glow">&#10084;</span></p>
+
+    <p class="final-credit reveal">Designed and developed with love by Lucky.</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
